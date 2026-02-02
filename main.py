@@ -7,7 +7,7 @@ import json
 class InstagramDeepLinkBot:
     def __init__(self, email):
         self.session = requests.Session()
-        self.email = "shubhytprem@gmail.com"
+        self.email = email
         self.username = "".join(random.choices(string.ascii_lowercase, k=11))
         self.password = "Dev_2026_Secure!"
         self.guid = str(uuid.uuid4())
@@ -73,5 +73,5 @@ class InstagramDeepLinkBot:
             res_final = self.session.post(url_final, headers=final_headers, data=data_final)
             return res_final.json()
         return "Failed to get signup_token"
-bot = InstagramDeepLinkBot("vava27@premipay.io")
+bot = InstagramDeepLinkBot("shubhytprem@gmail.com")
 print(json.dumps(bot.run(), indent=2))
