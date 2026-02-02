@@ -7,7 +7,7 @@ import json
 class InstagramDeepLinkBot:
     def __init__(self, email):
         self.session = requests.Session()
-        self.email = email
+        self.email = shubhytprem@gmail.com
         self.username = "".join(random.choices(string.ascii_lowercase, k=11))
         self.password = "Dev_2026_Secure!"
         self.guid = str(uuid.uuid4())
